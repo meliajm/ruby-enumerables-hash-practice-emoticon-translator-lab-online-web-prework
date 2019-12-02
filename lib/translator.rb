@@ -4,6 +4,7 @@ require "yaml"
 require "pry"
 
 def load_library(file)
+<<<<<<< HEAD
   emoticons = YAML.load_file(file)
   new_hash = {:get_emoticon => {:english_emotion => {}}, :get_meaning => {:japanese_emoticon => {}}}
   emoticons.each do |key, value|
@@ -15,6 +16,17 @@ def load_library(file)
       if !new_hash[:get_emoticon][:english_emotion][value[0]]
         new_hash[:get_emoticon][:english_emotion][value[0]] = key
       end
+=======
+  # code goes here
+  emoticons = YAML.load_file(file)
+  
+  new_hash = {:get_emoticon => {:enlish_emotion => []}, :get_meaning => {:japanese_emoticon => []}}
+  emoticons.each do |key, value|
+    # if !new_hash[:get_meaning].include?(value)
+    #   # new_hash[:get_meaning] << value
+      
+    # end
+>>>>>>> 7f766199e3b3dbbf6250648e609ff236d494a2bf
   end
   # binding.pry
   new_hash
